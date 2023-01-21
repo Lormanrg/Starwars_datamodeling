@@ -53,8 +53,6 @@ class Favorites(Base):
     user_id = Column(Integer, nullable=False)
     nature_id = Column(Integer, nullable=False)
     user_id = Column(Integer, ForeignKey('user.id'))
-    planet_id = Column(Integer, ForeignKey('planets.id'))
-    characters_id = Column(Integer, ForeignKey('characters.id'))
     nature = Column("nature",Enum(Nature))
     
     def add_favorites():
